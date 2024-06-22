@@ -1,0 +1,13 @@
+{
+  "name": "core",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "core/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "docker-build": {
+      "dependsOn": ["build"],
+      "command": "docker build -f core/Dockerfile . -t core"
+    }
+  }
+}
